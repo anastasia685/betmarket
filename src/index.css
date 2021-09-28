@@ -1,13 +1,98 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  list-style: none;
+}
+html, body, #root{
+  height: 100%;
+}
+html {
+  font-size: 62.5%;
+}
+body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #F7F9FC;
+  font-family: lbet-nus, sans-serif;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@font-face {
+  font-family: 'lbet-nus';
+  src: url('./assets/fonts/lbet-nus-light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'lbet-nus';
+  src: url('./assets/fonts/lbet-nus-regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'lbet-nus';
+  src: url('./assets/fonts/lbet-nus-bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'lbet-nus';
+  src: url('./assets/fonts/lbet-nus-black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'lbet-mt';
+  src: url('./assets/fonts/lbet-mt-light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'lbet-mt';
+  src: url('./assets/fonts/lbet-mt-regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'lbet-mt';
+  src: url('./assets/fonts/lbet-mt-bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'lbet-mt';
+  src: url('./assets/fonts/lbet-mt-black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'lbet-st';
+  src: url('./assets/fonts/lbet-st-regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media (max-width: 1500px){
+  html{
+    font-size: 60%;
+  }
+}
+@media (max-width: 1366px){
+  html{
+    font-size: 56%;
+  }
+}
+@media (max-width: 1000px){
+  html {
+    font-size: 54%;
+  }
 }

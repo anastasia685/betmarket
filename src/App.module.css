@@ -1,0 +1,84 @@
+.wrapper {
+    height: calc(100% - 65px);
+    position: relative;
+}
+.overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, .6);
+    z-index: 8;
+}
+
+main{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    max-width: 1800px;
+    margin: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding-top: 1.3rem;
+}
+
+.marketContainer {
+    width: calc(100% - 30rem);
+
+    overflow: auto;
+
+    margin-bottom: 3.2rem;
+}
+.filterItems {
+    display: flex;
+    align-items: center;
+    margin-right: 5rem;
+}
+.filterItems li {
+    display: flex;
+    align-items: center;
+    margin: 0 0.8rem 0 1.6rem;
+    text-transform: uppercase;
+}
+
+.offersContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2.4rem;
+    padding: 3.2rem 5.6rem 0 3.2rem;
+    color: #232428;
+}
+.offersContainer > h3 {
+    font-size: 1.87rem;
+    font-family: lbet-mt, sans-serif;
+    font-weight: bold;
+    color: #4D5F8D;
+    text-transform: uppercase;
+    position: relative;
+}
+.offersContainer > h3:before {
+    position: absolute;
+    left: -1.6rem;
+    top: 15%;
+    content: '';
+    width: 0.5rem;
+    height: 1.87rem;
+    background-color: #34C5A7;
+}
+
+@media (max-width: 1000px){
+    main {
+        padding-top: 0;
+    }
+    .offersContainer {
+        margin-top: 1.8rem;
+        min-height: 50px;
+        padding: 1.6rem 1.8rem 0 1.8rem;
+    }
+    .offersContainer > h3 {
+        display: none;
+    }
+    .marketContainer{
+        width: 100%;
+    }
+}

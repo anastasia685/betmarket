@@ -1,0 +1,82 @@
+.sidebarContainer{
+    position: sticky;
+    top: 0;
+    height: 100%;
+    width: 28rem;
+    margin-right: 2rem;
+    padding: 0 0.26rem;
+    overflow: auto;
+
+    transition: all .2s ease-in;
+}
+.sidebarContainer > ul{
+    width: 100%;
+    text-transform: uppercase;
+    background-color: white;
+    box-shadow: 0 3px 6px rgba(46, 81, 164, .16);
+}
+.menuItem{
+    color: #414141;
+    cursor: pointer;
+}
+.menuItem.active > div, .menuItem:hover > div {
+    background: #f8f8f8;
+    border-left: 0.5rem solid #005473;
+}
+.menuItem > div {
+    padding: 0.75rem;
+    font-size: 1.5rem;
+    position: relative;
+    border-top: 1px solid #f8f8f8;
+    border-left: 0 solid #005473;
+    display: flex;
+    align-items: center;
+
+    transition: all 0.1s ease-in;
+
+    font-family: lbet-mt, sans-serif;
+    font-weight: bold;
+}
+.menuItem span {
+    position: absolute;
+    right: 0;
+    /*top: 50%;*/
+    opacity: 0.7;
+    width: 3.3rem;
+    height: 2.6rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 50%;
+}
+.menuItem > ul {
+    width: 100%;
+    padding: 0 0 0.8rem;
+
+    display: none;
+}
+.menuItem.active > ul.active {
+    display: block;
+}
+.menuSubItem{
+    font-size: 1.28rem;
+    font-weight: bold;
+    padding: 0.8rem 0 0.8rem 4.2rem;
+    display: flex;
+}
+
+@media (max-width: 1000px){
+    .sidebarContainer{
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #F7F9FC;
+        z-index: 10;
+        width: 23rem;
+        max-width: 85%;
+        padding: 0;
+        transform: translateX(-100%);
+    }
+    .sidebarContainer.show {
+        transform: translateX(0);
+    }
+}

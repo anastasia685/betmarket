@@ -1,0 +1,32 @@
+.checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    margin-top: 0.3rem;
+    margin-right: 0.8rem;
+    height: 1.32rem;
+    width: 1.32rem;
+    border: 2px solid #414141;
+    cursor: pointer;
+    position: relative;
+}
+.checkbox.small {
+    height: 1.24rem;
+    width: 1.24rem;
+    margin-top: 0.2rem;
+    margin-right: 0.5rem;
+}
+.checkbox:active, .checkbox:checked {
+    background-color: #005473;
+}
+.checkbox:checked:after {
+    content: '\2714';
+    font-size: 1rem;
+    position: absolute;
+    top: -0.2rem;
+    left: 0.06rem;
+    color: white;
+}
+.checkbox.small:checked:after{
+    font-size: 0.9rem;
+    top: -0.2rem;
+}

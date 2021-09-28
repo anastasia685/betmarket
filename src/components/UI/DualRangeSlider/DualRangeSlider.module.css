@@ -1,0 +1,105 @@
+.container {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+}
+
+.sliderTrack,
+.sliderRange,
+.sliderLeftValue,
+.sliderRightValue {
+    position: absolute;
+}
+
+.sliderTrack,
+.sliderRange {
+    border-radius: 5px;
+    height: 10px;
+    border: 1px solid #d3d3d3;
+}
+
+.sliderTrack {
+    background-color: #fff;
+    width: 100%;
+    z-index: 1;
+}
+
+.sliderRange {
+    background-color: rgb(99, 115, 142);
+    z-index: 2;
+}
+
+.sliderLeftValue,
+.sliderRightValue {
+    color: black;
+    font-size: 12px;
+    top: -34px;
+    /*margin-top: 20px;*/
+    transform: translateX(-50%);
+    border: 1px solid #cecece;
+    border-radius: 2px;
+    text-align: center;
+    padding: 1px 4px;
+    background-color: #fff;
+}
+
+.sliderLeftValue {
+    z-index: 2;
+}
+
+/* Removing the default appearance */
+.thumb,
+.thumb::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.thumb {
+    pointer-events: none;
+    position: absolute;
+    height: 0;
+    width: 100%;
+    outline: none;
+}
+
+.thumbLeft {
+    z-index: 3;
+}
+
+.thumbRight {
+    z-index: 4;
+}
+
+/* For Chrome browsers */
+.thumb::-webkit-slider-thumb {
+    background-color: #f1f5f7;
+    border-radius: 50%;
+    box-shadow: 0 0 1px 1px rgb(99, 115, 142);
+    cursor: pointer;
+    height: 18px;
+    width: 18px;
+    margin-top: 8px;
+    pointer-events: all;
+    position: relative;
+}
+
+/* For Firefox browsers */
+.thumb::-moz-range-thumb {
+    background-color: #f1f5f7;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 0 1px 1px rgb(99, 115, 142);
+    cursor: pointer;
+    height: 18px;
+    width: 18px;
+    margin-top: 8px;
+    pointer-events: all;
+    position: relative;
+}

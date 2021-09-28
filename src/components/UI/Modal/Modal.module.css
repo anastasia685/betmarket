@@ -1,0 +1,193 @@
+.container {
+    position: absolute;
+    z-index: 12;
+    background-color: #fff;
+    border-radius: 3px;
+
+    width: 90%;
+    max-width: 650px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.container header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 2rem 1.6rem;
+    border-bottom: 1px solid #d3d3d3;
+
+    font-size: 1.7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.container button {
+    opacity: .8;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.container button:hover {
+    opacity: 1;
+}
+.container header button{
+    width: 2.2rem;
+    height: 2.2rem;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.container section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    background-color: #F2F5FA;
+    margin: 1.2rem;
+    border-radius: 0 12px 12px 0;
+    overflow: hidden;
+}
+.container section .imageContainer {
+    padding: 0.5rem 0;
+}
+.container section img {
+    width: 11rem;
+    border-radius: 5px;
+}
+.container section .title {
+    flex-grow: 2;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 2%;
+    /*margin-right: 3%;*/
+    font-size: 1.3rem;
+    color: grey;
+}
+.container section .title span:first-child{
+    font-size: 1.7rem;
+    color: black;
+    margin-bottom: 0.8rem;
+    font-weight: bold;
+}
+.container section .price {
+    flex-grow: 1;
+    background-color: #01b844;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: start;
+    font-size: 1.6rem;
+    min-height: 40px;
+    padding: 0 2%;
+}
+.container section .price span:first-child{
+    font-weight: bold;
+}
+.container section .price span:last-child {
+    font-size: 1rem;
+    color: #dde5eb;
+    text-decoration: line-through;
+    transform: translateY(-40%);
+}
+.container section .friendContainer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1.8rem 0.8rem;
+}
+.container section .friendContainer .inputContainer {
+    display: flex;
+    flex-direction: column-reverse;
+    height: 5rem;
+    width: 100%;
+    max-width: 250px;
+}
+.inputContainer input {
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid #005473;
+    font-size: 2rem;
+
+    font-family: lbet-mt, sans-serif;
+    color: #005473;
+    font-weight: bold;
+}
+.inputContainer label {
+    transform: translateY(60%);
+    font-size: 2rem;
+    font-weight: bold;
+    transition: all .2s ease;
+
+    font-family: lbet-mt, sans-serif;
+    color: #005473;
+}
+.inputContainer input:focus + label, .inputContainer input:valid + label {
+    transform: translateY(-40%);
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+.container footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 40px;
+
+    margin: 1.5rem;
+}
+.container footer button {
+    height: 100%;
+    width: 22%;
+    margin-left: 2.5%;
+    border: none;
+    border-radius: 0;
+    font-size: 1.9rem;
+    font-weight: bold;
+    color: #fff;
+    font-family: lbet-mt, sans-serif;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    background-color: #4d5f8d;
+}
+.container footer button.primary {
+    background-color: #008303;
+}
+
+@media (max-width: 500px){
+    .container footer {
+        justify-content: flex-start;
+        margin: 1.1rem;
+    }
+    .container footer button {
+        width: 32%;
+    }
+    .container section .friendContainer input, .container section .friendContainer label {
+        font-size: 1.6rem;
+    }
+    .inputContainer input:focus + label, .inputContainer input:valid + label {
+        font-size: 1rem;
+    }
+}
+@media (max-width: 400px){
+    .container section .price{
+        width: 100%;
+    }
+}
+@media (max-width: 300px){
+    .container footer button {
+        width: 46%;
+    }
+}
+@media (max-height: 300px){
+    .container {
+        top: 21rem;
+    }
+}
